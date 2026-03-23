@@ -16,8 +16,12 @@ export default defineConfig({
     baseURL: 'https://saucedemo.com',
 
     /* 🧠 Le débuggage intelligent */
-    trace: 'on-first-retry',         // Enregistre une vidéo/trace si le test échoue
-    screenshot: 'only-on-failure',   // Prend une photo auto si ça plante
+    // 🔍 Options : 'on', 'off', 'on-first-retry', 'retain-on-failure'
+    trace: 'on', 
+    
+    // Tu peux aussi ajouter les captures d'écran et vidéos ici
+    screenshot: 'only-on-failure',
+    video: 'retain-on-failure',
 
     /* 🐢 Le mode ralenti pour éviter les erreurs 429 et voir ce qui se passe */
     launchOptions: {
